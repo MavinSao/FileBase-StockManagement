@@ -10,12 +10,8 @@ import org.nocrala.tools.texttablefmt.Table;
 import java.util.ArrayList;
 
 public class ListProduct {
-        int CurrentPage = 0;
-
-
-    public void setCurrentPage(int currentPage) {
-        CurrentPage = currentPage;
-    }
+        public static int CurrentPage = 0;
+        public static int page = 1,numberOfRow=5;
 
     public void display(ArrayList<Product> list) {
             CellStyle numberStyle = new CellStyle(CellStyle.HorizontalAlign.right);
@@ -32,7 +28,8 @@ public class ListProduct {
             t.addCell("Unit Price", numberStyle);
             t.addCell("Quantity", numberStyle);
             t.addCell("Import Data");
-            for (int i = CurrentPage; i<=CurrentPage; i++) {
+            for (int i = CurrentPage; i<CurrentPage+numberOfRow; i++) {
+                if(CurrentPage>=list.size())break;
                 t.addCell(list.get(i).getId()+"",numberStyle);
                 t.addCell(list.get(i).getName()+"");
                 t.addCell(list.get(i).getUnitPrice()+"$",numberStyle);
@@ -43,7 +40,7 @@ public class ListProduct {
                     ShownBorders.SURROUND);
             tp.setColumnWidth(0,35,38);
             tp.setColumnWidth(1,25,25);
-            tp.addCell("Page : "+" of " + (list.size()/2));
+            tp.addCell("Page : "+page+" of " + (list.size()/numberOfRow));
             tp.addCell("Total Record : "+ list.size());
             System.out.println(t.render());
             System.out.println(tp.render());

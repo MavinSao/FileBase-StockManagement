@@ -1,7 +1,6 @@
 package com.kshrd.views;
 
 import com.kshrd.models.DAO.SMSAccess;
-import com.kshrd.models.DAO.SMSReadWrite;
 import com.kshrd.models.DTO.Product;
 import org.nocrala.tools.texttablefmt.BorderStyle;
 import org.nocrala.tools.texttablefmt.CellStyle;
@@ -9,17 +8,20 @@ import org.nocrala.tools.texttablefmt.ShownBorders;
 import org.nocrala.tools.texttablefmt.Table;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SMSView {
-    public static void main(String[] args) throws IOException {
+    public void display() throws IOException {
 
-            SMSReadWrite sw = new SMSReadWrite();
+            LocalDate ld = LocalDate.now();
             SMSAccess sa = new SMSAccess();
             ListProduct listProduct = new ListProduct();
             ArrayList<Product> v = new ArrayList<>();
-            v = sw.readObj();
+            for(int i=1;i<=25;i++){
+                v.add(new Product(i,"coca",4.5,5,ld.toString()));
+            }
             Scanner sc = new Scanner(System.in);
             Pagination page = new Pagination();
             System.out.println("Please Wait Loading.....!");
@@ -71,6 +73,10 @@ public class SMSView {
                         break;
                     case "d":
                         System.out.println("delete");
+                        System.out.println("Enter ID :");
+                        int id = sc.nextInt();
+                        int index = id-1;
+                        v.remove(index);
                         break;
                     case "f":
                         System.out.println("first");
@@ -92,10 +98,15 @@ public class SMSView {
                         sa.search(v);
                         break;
                     case "g":
-                        System.out.println("goto");
+                        System.out.print("Wish page do you want to go : "); int goTo = sc.nextInt();
+                        page.goTo(v,goTo);
+
                         break;
                     case "se":
                         System.out.println("setrow");
+                        System.out.print("How many row you want to set ? :");
+                        int row =sc.nextInt();
+                        page.setRow(row);
                         break;
                     case "sa":
                         System.out.println("save");
@@ -111,6 +122,7 @@ public class SMSView {
                         break;
                     case "e":
                         System.out.println("exit");
+                        System.exit(0);
                         break;
 
                 }

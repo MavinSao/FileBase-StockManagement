@@ -13,13 +13,14 @@ public class SMSAccess {
      Table tb = new Table(2, BorderStyle.UNICODE_ROUND_BOX, ShownBorders.ALL);
      LocalDate ld = LocalDate.now();
      Scanner sc = new Scanner(System.in);
+     //Insert Object
      public ArrayList<Product> write(ArrayList v){
          int id = v.size() + 1;
          System.out.println("Product ID : "+ id);
          System.out.println("Product's name : ");
          String name = sc.next();
-         System.out.println("Product's Price : ");
-         Double price = sc.nextDouble();
+             System.out.println("Product's Price : ");
+             double price = sc.nextDouble();
          System.out.println("Product's Qty : ");
          int qty = sc.nextInt();
 
@@ -79,6 +80,7 @@ public class SMSAccess {
             }
             System.out.println(ts.render());
         }
+
 
 }
 
