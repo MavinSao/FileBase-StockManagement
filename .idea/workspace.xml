@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/com/kshrd/controllers/Main.java" line="5" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="9ebac9aa-2b90-45a3-b17a-1fa61e6b0b1a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/kshrd/views/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SMS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SMS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SMS/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SMS/com/kshrd/controllers/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SMS/com/kshrd/controllers/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SMS/com/kshrd/models/DAO/SMSAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SMS/com/kshrd/models/DAO/SMSAccess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SMS/com/kshrd/models/DAO/SMSConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SMS/com/kshrd/models/DAO/SMSConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SMS/com/kshrd/models/DAO/SMSDB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SMS/com/kshrd/models/DAO/SMSDB.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SMS/com/kshrd/models/DTO/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SMS/com/kshrd/models/DTO/Product.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SMS/com/kshrd/views/SMSView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SMS/com/kshrd/views/SMSView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kshrd/controllers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kshrd/controllers/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSDB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSDB.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/kshrd/models/DTO/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kshrd/models/DTO/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/kshrd/views/SMSView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kshrd/views/SMSView.java" afterDir="false" />
     </list>
@@ -45,49 +39,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kshrd/controllers/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSDB.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSAccess.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/kshrd/views/SMSView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="95" column="44" lean-forward="true" selection-start-line="95" selection-start-column="44" selection-end-line="95" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1257#1317#1" />
-              </folding>
+            <state relative-caret-position="216">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -95,12 +50,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/kshrd/views/ListProduct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="43" />
+            <state relative-caret-position="189">
+              <caret line="13" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#393#394#0" expanded="true" />
-                <element signature="e#434#435#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,29 +63,49 @@
         <entry file="file://$PROJECT_DIR$/src/com/kshrd/views/Pagination.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kshrd/views/test.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/kshrd/views/SMSView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="-567">
+              <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
               <folding>
-                <element signature="e#89#90#0" expanded="true" />
-                <element signature="e#132#133#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kshrd/models/DTO/Product.java">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/io/ObjectInputStream.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="72" lean-forward="true" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="72" />
+            <state relative-caret-position="10341">
+              <caret line="430" selection-start-line="430" selection-end-line="430" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSAccess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/kshrd/controllers/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -157,7 +130,6 @@
         <option value="$PROJECT_DIR$/src/com/kshrd/Main.java" />
         <option value="$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSInterface.java" />
         <option value="$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSConnection.java" />
-        <option value="$PROJECT_DIR$/src/com/kshrd/controllers/Main.java" />
         <option value="$PROJECT_DIR$/src/com/kshrd/views/test.java" />
         <option value="$PROJECT_DIR$/src/com/kshrd/views/displayTest.java" />
         <option value="$PROJECT_DIR$/src/com/kshrd/views/product.java" />
@@ -165,8 +137,12 @@
         <option value="$PROJECT_DIR$/src/com/kshrd/views/Menu.java" />
         <option value="$PROJECT_DIR$/src/com/kshrd/views/Pagination.java" />
         <option value="$PROJECT_DIR$/src/com/kshrd/views/ListProduct.java" />
-        <option value="$PROJECT_DIR$/src/com/kshrd/models/DTO/Product.java" />
         <option value="$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSAccess.java" />
+        <option value="$PROJECT_DIR$/src/com/kshrd/models/DTO/Product.java" />
+        <option value="$PROJECT_DIR$/src/com/kshrd/controllers/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSDB.txt" />
+        <option value="$PROJECT_DIR$/src/com/kshrd/models/DAO/ReadWriteData.java" />
+        <option value="$PROJECT_DIR$/src/com/kshrd/models/DAO/TestRead.java" />
         <option value="$PROJECT_DIR$/src/com/kshrd/views/SMSView.java" />
       </list>
     </option>
@@ -178,8 +154,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-159" />
-    <option name="y" value="12" />
+    <option name="x" value="-160" />
+    <option name="y" value="10" />
     <option name="width" value="1040" />
     <option name="height" value="780" />
   </component>
@@ -189,6 +165,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -248,15 +226,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556443585336" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../StockManagement/StockManagement" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556499821674" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -316,12 +292,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="display" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kshrd.views.display" />
+    <configuration name="TestRead" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kshrd.models.DAO.TestRead" />
       <module name="SMS" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kshrd.views.*" />
+          <option name="PATTERN" value="com.kshrd.models.DAO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -329,8 +305,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kshrd.views.test" />
+    <configuration name="display" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kshrd.views.display" />
       <module name="SMS" />
       <extension name="coverage">
         <pattern>
@@ -345,10 +321,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.SMSView" />
+        <item itemvalue="Application.TestRead" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.SMSAccess" />
         <item itemvalue="Application.display" />
-        <item itemvalue="Application.test" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -379,17 +355,22 @@
       <workItem from="1556375251801" duration="6121000" />
       <workItem from="1556381920109" duration="12726000" />
       <workItem from="1556425383993" duration="16946000" />
+      <workItem from="1556449265227" duration="2583000" />
+      <workItem from="1556457619077" duration="835000" />
+      <workItem from="1556458490925" duration="4041000" />
+      <workItem from="1556498886341" duration="932000" />
+      <workItem from="1556507062789" duration="967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44838000" />
+    <option name="totallyTimeSpent" value="54196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19798657" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21140939" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -408,7 +389,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.2034188" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.6331445" />
-      <window_info anchor="bottom" id="Run" order="12" weight="0.41926345" />
+      <window_info anchor="bottom" id="Run" order="12" weight="0.62322944" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -431,16 +412,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSInterface.java" />
     <entry file="file://$PROJECT_DIR$/src/com/kshrd/views/displayTest.java" />
     <entry file="file://$PROJECT_DIR$/src/com/kshrd/views/product.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSDB.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kshrd/controllers/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kshrd/views/test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -452,24 +423,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kshrd/models/DTO/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="72" lean-forward="true" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="72" />
+        <state relative-caret-position="378">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSAccess.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/io/FileOutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        <state relative-caret-position="758">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSDB.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="297">
+          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kshrd/models/DAO/ReadWriteData.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/kshrd/models/DAO/TestRead.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kshrd/views/ListProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="13" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -479,29 +467,40 @@
     <entry file="file://$PROJECT_DIR$/src/com/kshrd/views/Pagination.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kshrd/views/ListProduct.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/io/ObjectInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="43" />
+        <state relative-caret-position="10341">
+          <caret line="430" selection-start-line="430" selection-end-line="430" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kshrd/models/DAO/SMSAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kshrd/controllers/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kshrd/views/SMSView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="95" column="44" lean-forward="true" selection-start-line="95" selection-start-column="44" selection-end-line="95" selection-end-column="44" />
+        <state relative-caret-position="-567">
+          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1257#1317#1" />
           </folding>
         </state>
       </provider>

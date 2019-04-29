@@ -7,14 +7,49 @@ import org.nocrala.tools.texttablefmt.CellStyle;
 import org.nocrala.tools.texttablefmt.ShownBorders;
 import org.nocrala.tools.texttablefmt.Table;
 
+import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class SMSView {
-    public static void main(String[] args) {
-            ArrayList<Product> v = new ArrayList<>();
-            LocalDate ld = LocalDate.now();
+    public static void main(String[] args) throws IOException {
+        ArrayList<Product> products = new ArrayList<>();
+        LocalDate ld = LocalDate.now();
+       for(int i=1; i<=1000000; i++)
+       {
+           products.add(new Product(i, "coca", 22.5, 5, ld.toString()));
+
+       }
+       String path ="cheata.txt";
+        try {
+            ObjectOutputStream write1 = new ObjectOutputStream(new FileOutputStream(path));
+           write1.writeObject(products);
+           write1.close();
+            System.out.println("Write Complete!");
+       }
+       catch (IOException e) {
+           // TODO Auto-generated catch block
+           e.printStackTrace();
+      }
+        ArrayList<Product> v = new ArrayList<>();
+        try
+        {
+            ObjectInputStream read1= new ObjectInputStream(new FileInputStream(path));
+            v =(ArrayList<Product>) read1.readObject();
+            Iterator<Product> iter = v.iterator();
+        }
+        catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+
+
             ListProduct listProduct = new ListProduct();
             Scanner sc = new Scanner(System.in);
             Pagination page = new Pagination();
@@ -22,17 +57,12 @@ public class SMSView {
 
 
 
-            System.out.print("How many record that you want to add ? :");
-            int n = sc.nextInt();
-            for (int i = 1; i <= n; i++) {
-                v.add(new Product(i, "coca", 22.5, 5, ld.toString()));
-            }
             System.out.println("Please Wait Loading.....!");
             System.out.println("Current time loading : ......");
 
 
             CellStyle numberStyle = new CellStyle(CellStyle.HorizontalAlign.right);
-            Table tm = new Table(10, BorderStyle.DESIGN_CASUAL_WIDE, ShownBorders.SURROUND_HEADER_AND_COLUMNS);
+            Table tm = new Table(10, BorderStyle.CLASSIC_COMPATIBLE_WIDE, ShownBorders.SURROUND_HEADER_AND_COLUMNS);
             for (int i = 0; i <= 9; i++) {
                 tm.setColumnWidth(i, 5, 10);
             }

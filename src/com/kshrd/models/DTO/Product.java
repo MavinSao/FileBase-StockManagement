@@ -1,6 +1,8 @@
 package com.kshrd.models.DTO;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
     int id=1;
     String name;
     Double unitPrice;
