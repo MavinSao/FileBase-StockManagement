@@ -1,62 +1,27 @@
 package com.kshrd.views;
 
 import com.kshrd.models.DAO.SMSAccess;
+import com.kshrd.models.DAO.SMSReadWrite;
 import com.kshrd.models.DTO.Product;
 import org.nocrala.tools.texttablefmt.BorderStyle;
 import org.nocrala.tools.texttablefmt.CellStyle;
 import org.nocrala.tools.texttablefmt.ShownBorders;
 import org.nocrala.tools.texttablefmt.Table;
 
-import java.io.*;
-import java.time.LocalDate;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class SMSView {
     public static void main(String[] args) throws IOException {
-        ArrayList<Product> products = new ArrayList<>();
-        LocalDate ld = LocalDate.now();
-       for(int i=1; i<=1000000; i++)
-       {
-           products.add(new Product(i, "coca", 22.5, 5, ld.toString()));
 
-       }
-       String path ="cheata.txt";
-        try {
-            ObjectOutputStream write1 = new ObjectOutputStream(new FileOutputStream(path));
-           write1.writeObject(products);
-           write1.close();
-            System.out.println("Write Complete!");
-       }
-       catch (IOException e) {
-           // TODO Auto-generated catch block
-           e.printStackTrace();
-      }
-        ArrayList<Product> v = new ArrayList<>();
-        try
-        {
-            ObjectInputStream read1= new ObjectInputStream(new FileInputStream(path));
-            v =(ArrayList<Product>) read1.readObject();
-            Iterator<Product> iter = v.iterator();
-        }
-        catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
-
-
+            SMSReadWrite sw = new SMSReadWrite();
+            SMSAccess sa = new SMSAccess();
             ListProduct listProduct = new ListProduct();
+            ArrayList<Product> v = new ArrayList<>();
+            v = sw.readObj();
             Scanner sc = new Scanner(System.in);
             Pagination page = new Pagination();
-            Table sh = new Table(5, BorderStyle.DESIGN_CAFE_WIDE, ShownBorders.ALL);
-
-
-
             System.out.println("Please Wait Loading.....!");
             System.out.println("Current time loading : ......");
 
@@ -95,7 +60,8 @@ public class SMSView {
                         listProduct.display(v);
                         break;
                     case "w":
-                        System.out.println("write data..");
+                        System.out.println("write");
+                        v=sa.write(v);
                         break;
                     case "r":
                         System.out.println("read");
@@ -120,30 +86,10 @@ public class SMSView {
                         break;
                     case "l":
                         System.out.println("last");
-                        page.last(v);
+
                         break;
                     case "s":
-                        sh.setColumnWidth(0,8,9);
-                        sh.setColumnWidth(1,8,9);
-                        sh.setColumnWidth(2,15,2);
-                        sh.setColumnWidth(3,15,15);
-                        sh.setColumnWidth(4,15,15);
-                        System.out.println("search: ");
-                        String name = sc.next();
-                        ArrayList<Product> listsearch = SMSAccess.search(v,name);
-                        sh.addCell("ID");
-                        sh.addCell("Name" );
-                        sh.addCell("Unit Price", numberStyle);
-                        sh.addCell("Quantity", numberStyle);
-                        sh.addCell("Import Data");
-                        for (Product p : listsearch) {
-                            sh.addCell(p.getId()+"",numberStyle);
-                            sh.addCell(p.getName()+"");
-                            sh.addCell(p.getUnitPrice()+"$",numberStyle);
-                            sh.addCell(p.getQty()+"",numberStyle);
-                            sh.addCell(p.getImportDate()+"");
-                        }
-                        System.out.println(sh.render());
+                        sa.search(v);
                         break;
                     case "g":
                         System.out.println("goto");

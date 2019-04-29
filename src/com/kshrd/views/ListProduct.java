@@ -43,7 +43,7 @@ public class ListProduct {
                     ShownBorders.SURROUND);
             tp.setColumnWidth(0,35,38);
             tp.setColumnWidth(1,25,25);
-            tp.addCell("Page : "+ (CurrentPage)+" of " + (list.size()/2));
+            tp.addCell("Page : "+" of " + (list.size()/2));
             tp.addCell("Total Record : "+ list.size());
             System.out.println(t.render());
             System.out.println(tp.render());
