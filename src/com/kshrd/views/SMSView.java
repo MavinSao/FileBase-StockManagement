@@ -85,7 +85,7 @@ public class SMSView {
                         page.next(v);
                         break;
                     case "l":
-                        System.out.println("last");
+                        page.last(v);
 
                         break;
                     case "s":

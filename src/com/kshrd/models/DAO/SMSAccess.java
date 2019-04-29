@@ -50,7 +50,8 @@ public class SMSAccess {
             nameToSearch = sc.next();
             ArrayList<Product> rs = new ArrayList<>();
             String msg = "";
-               for(Product product : productList) {
+               for(Product product : productList)
+               {
                    if (nameToSearch.equalsIgnoreCase(product.getName())){
                         rs.add(product);
                    }
