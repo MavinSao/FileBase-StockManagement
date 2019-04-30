@@ -13,19 +13,17 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SMSView {
+    LocalDate ld = LocalDate.now();
+    static SMSAccess sa = new SMSAccess();
+    public static ListProduct listProduct = new ListProduct();
+    public static ArrayList<Product> products = new ArrayList<>();
     public void display() throws IOException {
 
-            LocalDate ld = LocalDate.now();
-            SMSAccess sa = new SMSAccess();
-            ListProduct listProduct = new ListProduct();
-            ArrayList<Product> v = new ArrayList<>();
-            for(int i=1;i<=25;i++){
-                v.add(new Product(i,"coca",4.5,5,ld.toString()));
-            }
+
+
             Scanner sc = new Scanner(System.in);
             Pagination page = new Pagination();
-            System.out.println("Please Wait Loading.....!");
-            System.out.println("Current time loading : ......");
+
 
 
             CellStyle numberStyle = new CellStyle(CellStyle.HorizontalAlign.right);
@@ -58,52 +56,44 @@ public class SMSView {
 
                 switch (cmd) {
                     case "*":
-                        System.out.println("                --List Product--");
-                        listProduct.display(v);
+                        System.out.println("                 --List Product--");
+                        listProduct.display();
                         break;
                     case "w":
-                        System.out.println("write");
-                        v=sa.write(v);
+                        sa.write();
                         break;
                     case "r":
-                        System.out.println("read");
+                        sa.read();
                         break;
                     case "u":
                         System.out.println("update");
                         break;
                     case "d":
-                        System.out.println("delete");
-                        System.out.println("Enter ID :");
-                        int id = sc.nextInt();
-                        int index = id-1;
-                        v.remove(index);
+
                         break;
                     case "f":
                         System.out.println("first");
-                        page.first(v);
+                        page.first();
                         break;
                     case "p":
                         System.out.println("previous");
-                        page.previouse(v);
+                        page.previouse();
                         break;
                     case "n":
-                        System.out.println("next");
-                        page.next(v);
+                        page.next();
                         break;
                     case "l":
-                        page.last(v);
+                        page.last();
 
                         break;
                     case "s":
-                        sa.search(v);
+                        sa.search();
                         break;
                     case "g":
                         System.out.print("Wish page do you want to go : "); int goTo = sc.nextInt();
-                        page.goTo(v,goTo);
-
+                        page.goTo(goTo);
                         break;
                     case "se":
-                        System.out.println("setrow");
                         System.out.print("How many row you want to set ? :");
                         int row =sc.nextInt();
                         page.setRow(row);
@@ -124,6 +114,16 @@ public class SMSView {
                         System.out.println("exit");
                         System.exit(0);
                         break;
+                    case "#10m":
+                        System.out.println("Please Wait Loading.....!");
+                        for(int i=1;i<=10000000;i++){
+                            products.add(new Product(i,"coca",4.5,5,ld.toString()));
+                        }
+                        System.out.println("Done!!");
+
+                        break;
+                    default:
+                        System.out.println("Input Invalid");
 
                 }
             }
