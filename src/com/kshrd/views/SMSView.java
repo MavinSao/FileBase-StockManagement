@@ -69,7 +69,7 @@ public class SMSView {
                         System.out.println("update");
                         break;
                     case "d":
-
+                        sa.delete();
                         break;
                     case "f":
                         System.out.println("first");
@@ -90,13 +90,10 @@ public class SMSView {
                         sa.search();
                         break;
                     case "g":
-                        System.out.print("Wish page do you want to go : "); int goTo = sc.nextInt();
-                        page.goTo(goTo);
+                        page.goTo();
                         break;
                     case "se":
-                        System.out.print("How many row you want to set ? :");
-                        int row =sc.nextInt();
-                        page.setRow(row);
+                        page.setRow();
                         break;
                     case "sa":
                         System.out.println("save");
@@ -111,7 +108,7 @@ public class SMSView {
                         System.out.println("help");
                         break;
                     case "e":
-                        System.out.println("exit");
+                        System.out.println("Good Bye");
                         System.exit(0);
                         break;
                     case "#10m":

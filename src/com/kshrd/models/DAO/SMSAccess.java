@@ -2,6 +2,7 @@ package com.kshrd.models.DAO;
 
 import com.kshrd.models.DTO.Product;
 import com.kshrd.views.SMSView;
+import com.kshrd.views.Validate;
 import org.nocrala.tools.texttablefmt.BorderStyle;
 import org.nocrala.tools.texttablefmt.ShownBorders;
 import org.nocrala.tools.texttablefmt.Table;
@@ -16,19 +17,28 @@ public class SMSAccess {
      Scanner sc = new Scanner(System.in);
      //Insert Object
      public void write(){
+         String pri;
+         String qty;
          Table tb = new Table(2, BorderStyle.UNICODE_BOX_DOUBLE_BORDER, ShownBorders.ALL);
          int id = SMSView.products.size() + 1;
          System.out.print("Product ID : "+ id);
          System.out.println();
          System.out.print("Product's name : ");
          String name = sc.next();
+         do {
              System.out.print("Product's Price : ");
-             double price = sc.nextDouble();
-         System.out.print("Product's Qty : ");
-         int qty = sc.nextInt();
+             pri = sc.next();
+         }while (!Validate.isNumber(pri));
+         double price = Double.parseDouble(pri);
+         do {
+             System.out.print("Product's Qty : ");
+             qty = sc.next();
+         }while (!Validate.isNumber(qty));
+         int quantity = Integer.parseInt(qty);
+
          System.out.println();
          System.out.println("===Product Information===");
-         Product pro = new Product(id,name,price,qty,ld.toString());
+         Product pro = new Product(id,name,price,quantity,ld.toString());
          tb.addCell("ID");
          tb.addCell(pro.getId()+"");
          tb.addCell("Name");
@@ -41,7 +51,7 @@ public class SMSAccess {
          tb.addCell(pro.getImportDate()+"");
          System.out.println(tb.render());
          System.out.println();
-         System.out.print("Are you sure for add this record ? Y[Yes]/N[No] :");
+         System.out.print("Are you sure for add this record ? [Y/y]/[N/n] :");
          String an = sc.next();
          if(an.equalsIgnoreCase("y")||an.equalsIgnoreCase("yes")){
              System.out.println();
@@ -57,7 +67,7 @@ public class SMSAccess {
         {
             Table ts = new Table(5, BorderStyle.UNICODE_BOX_DOUBLE_BORDER, ShownBorders.ALL);
             String nameToSearch="";
-            System.out.println("Please Enter something you want to search :");
+            System.out.println("Please Enter Name you want to search :");
             Scanner sc = new Scanner(System.in);
             nameToSearch = sc.next();
             ArrayList<Product> rs = new ArrayList<>();
@@ -92,9 +102,12 @@ public class SMSAccess {
         }
         public void read(){
             Table tr = new Table(2, BorderStyle.UNICODE_BOX_DOUBLE_BORDER, ShownBorders.ALL);
-            int id;
-            System.out.print("Read by ID : ");
-            id = sc.nextInt();
+            String idr;
+            do {
+                System.out.print("Read by ID : ");
+                idr = sc.next();
+            }while (!Validate.isNumber(idr));
+                int id = Integer.parseInt(idr);
             boolean isFound = false;
             for(Product product : SMSView.products)
             {
@@ -118,9 +131,51 @@ public class SMSAccess {
             if (isFound == false) {
                 System.out.println("Invalid ID !!!");
             }
-
-
         }
+        public void delete(){
+         String idd;
+            do {
+                System.out.print("Please input ID of Product : ");
+                idd = sc.next();
+            }while (!Validate.isNumber(idd));
+            int id = Integer.parseInt(idd);
+            Table tl = new Table(2, BorderStyle.UNICODE_BOX_DOUBLE_BORDER, ShownBorders.ALL);
+            boolean isFound = false;
+            for(Product product : SMSView.products)
+            {
+                if (id == product.getId()){
+                    tl.addCell("ID");
+                    tl.addCell(product.getId() + "");
+                    tl.addCell("Name");
+                    tl.addCell(product.getName() + "");
+                    tl.addCell("Unit Price");
+                    tl.addCell(product.getUnitPrice() + "$");
+                    tl.addCell("Quantity");
+                    tl.addCell(product.getQty() + "");
+                    tl.addCell("Import Date");
+                    tl.addCell(product.getImportDate() + "");
+                    System.out.println(tl.render());
+                    isFound = true;
+                    System.out.print("Are you sure want to delete this record ? [Y/y] or [N/n] :");
+                    String an = sc.next();
+                    if(an.equalsIgnoreCase("y")){
+
+                        SMSView.products.remove((product.getId()-1));
+                        System.out.println();
+                        System.out.println("Delete Successful");
+                    }else {
+                        System.out.println();
+                        System.out.println("Delete Canceled!!!");
+                    }
+                    break;
+                }
+
+            }
+            if (isFound == false) {
+                System.out.println("Invalid ID !!!");
+            }
+        }
+
 
 
 

@@ -12,7 +12,7 @@ public class Validate {
             }
 
         }catch (Exception e){
-            System.out.println("Invalid number...!");
+            System.out.println("Please input number...!");
             return false;
         }
     }
