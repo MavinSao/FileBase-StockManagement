@@ -66,17 +66,14 @@ public class SMSView {
                         sa.read();
                         break;
                     case "u":
-                        System.out.println("update");
                         break;
                     case "d":
                         sa.delete();
                         break;
                     case "f":
-                        System.out.println("first");
                         page.first();
                         break;
                     case "p":
-                        System.out.println("previous");
                         page.previouse();
                         break;
                     case "n":
@@ -113,11 +110,22 @@ public class SMSView {
                         break;
                     case "#10m":
                         System.out.println("Please Wait Loading.....!");
+                        long startTime =System.currentTimeMillis();
                         for(int i=1;i<=10000000;i++){
                             products.add(new Product(i,"coca",4.5,5,ld.toString()));
                         }
-                        System.out.println("Done!!");
+                        long endTime = System.currentTimeMillis();
+                        long time = (endTime -startTime)/1000;
 
+                        System.out.println("Calculate time : "+time+"sec");
+                        System.out.println("Done!!");
+                        break;
+                    case "#addR":
+                        System.out.print("Input number of record : ");
+                        int num = sc.nextInt();
+                        for (int i=1;i<=num;i++){
+                            products.add(new Product(i,"coca",4.5,5,ld.toString()));
+                        }
                         break;
                     default:
                         System.out.println("Input Invalid");

@@ -10,19 +10,16 @@ public class Pagination {
     ListProduct lp = new ListProduct();
     ArrayList<Product> v = SMSView.products;
     Scanner sc = new Scanner(System.in);
-    int i = 0;
+    int row = 0;
     void first(){
         ListProduct.CurrentPage = 0;
         ListProduct.page = 1;
         lp.display();
     }
     void previouse(){
-
         ListProduct.page--;
         if(ListProduct.page<1){
-            ListProduct.CurrentPage = v.size()-ListProduct.numberOfRow;
-            ListProduct.page = v.size()/ListProduct.numberOfRow;
-            lp.display();
+            last();
         }else {
             ListProduct.CurrentPage-=ListProduct.numberOfRow;
             lp.display();
@@ -32,7 +29,7 @@ public class Pagination {
         ListProduct.CurrentPage += ListProduct.numberOfRow;
         if(ListProduct.CurrentPage>=v.size()){
                ListProduct.CurrentPage = 0;
-                ListProduct.page = 1;
+               ListProduct.page = 1;
             lp.display();
         }else {
             ListProduct.page+=1;
@@ -40,9 +37,21 @@ public class Pagination {
         }
     }
      void last(){
-         ListProduct.CurrentPage = v.size()-ListProduct.numberOfRow;
-         ListProduct.page = v.size()/ListProduct.numberOfRow;
-         lp.display();
+             if (v.size()%ListProduct.numberOfRow==0){
+             ListProduct.totalPage = (SMSView.products.size() / ListProduct.numberOfRow);
+                 ListProduct.CurrentPage += ListProduct.numberOfRow;
+
+             }
+             else {
+
+                 ListProduct.CurrentPage = (v.size()- ListProduct.numberOfRow)+(v.size()%ListProduct.numberOfRow);
+                 ListProduct.totalPage = (SMSView.products.size() / ListProduct.numberOfRow)+1;
+                 ListProduct.numberOfRow = v.size()-ListProduct.CurrentPage;
+             }
+             ListProduct.page = ListProduct.totalPage;
+             lp.display();
+             ListProduct.numberOfRow = row;
+
       }
      void goTo(){
         String goTo;
@@ -61,8 +70,13 @@ public class Pagination {
             System.out.print("How many row you want to set ? :");
             rows = sc.next();
         }while (!Validate.isNumber(rows));
-            int row = Integer.parseInt(rows);
-        ListProduct.numberOfRow = row;
+            row = Integer.parseInt(rows);
+            if(SMSView.products.size()%row==0) {
+                ListProduct.numberOfRow = row;
+            }else {
+                ListProduct.numberOfRow = row;
+                ListProduct.totalPage = (SMSView.products.size() / ListProduct.numberOfRow)+1;
+            }
     }
 
 }

@@ -158,11 +158,11 @@ public class SMSAccess {
                     isFound = true;
                     System.out.print("Are you sure want to delete this record ? [Y/y] or [N/n] :");
                     String an = sc.next();
-                    if(an.equalsIgnoreCase("y")){
 
-                        SMSView.products.remove((product.getId()-1));
-                        System.out.println();
-                        System.out.println("Delete Successful");
+                    if(an.equalsIgnoreCase("y")){
+                            SMSView.products.remove(product);
+                            System.out.println();
+                            System.out.println("Delete Successful");
                     }else {
                         System.out.println();
                         System.out.println("Delete Canceled!!!");

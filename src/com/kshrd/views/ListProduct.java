@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class ListProduct {
         public static int CurrentPage = 0;
         public static int page = 1,numberOfRow=1;
+        public static int totalPage  ;
 
     public void display() {
             ArrayList<Product> list = SMSView.products;
@@ -28,16 +29,23 @@ public class ListProduct {
                     t.addCell("Quantity", numberStyle);
                     t.addCell("Import Data");
                     for (int i = CurrentPage; i < CurrentPage + numberOfRow; i++) {
+                            if(i>list.size()) break;
                             t.addCell(list.get(i).getId() + "", numberStyle);
                             t.addCell(list.get(i).getName() + "");
                             t.addCell(list.get(i).getUnitPrice() + "$", numberStyle);
                             t.addCell(list.get(i).getQty() + "", numberStyle);
                             t.addCell(list.get(i).getImportDate() + "");
                     }
+                    if (list.size()%numberOfRow==0){
+                            totalPage = (SMSView.products.size() / ListProduct.numberOfRow);
+                    }
+                    else {
+                            totalPage = (SMSView.products.size() / ListProduct.numberOfRow)+1;
+                    }
                     Table tp = new Table(2, BorderStyle.DESIGN_CURTAIN_HEAVY,
                             ShownBorders.SURROUND);
                     tp.setColumnWidth(0, 25, 30);
-                    tp.addCell("Page : " + page + " of " + (list.size() / numberOfRow));
+                    tp.addCell("Page : " + page + " of " + totalPage);
                     tp.addCell("Total Record : " + list.size());
                     System.out.println(t.render());
                     System.out.println(tp.render());
